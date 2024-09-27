@@ -14,16 +14,14 @@ On a Wazuh Agent Server, run the below
 1. `git clone github.com/Onboardbase/onboardbase-wazuh`
 2. `cd onboardbase-wazuh`
 3.  Setup 
-4. `bash ./setup.sh`  # Sets up cron to pull data from onboardbase every 3 minutes
+4. `bash -c ./setup.sh`  # Sets up cron to pull data from onboardbase every 3 minutes
 
 The setup ensures collect logs at `~/.onboardbase/logs/remote_activity_logs`
 
 ---
 ```go
 ```bash
-python -m venv /tmp/onboardbase-wazuh-venv
-source /tmp/onboardbase-wazuh-venv
-pip install -r requirements.txt
+pip install requests
 ```
 ```
 ---
