@@ -4,12 +4,12 @@
 This repo provides the necessary setup and code required to make onboardbase push logs to Wazuh Cluster.
 
 Requirements:
-- Wazuh Server
-- Wazuh Agent
-- Onboardbase Account(Follow [this](https://docs.onboardbase.com/reference/api-auth) to get an API Key)
+- Wazuh server
+- Wazuh agent
+- Onboardbase account(Follow [this](https://docs.onboardbase.com/reference/api-auth) to get an API Key)
 
 ### Installation
-On a Wazuh Agent Server, run the below
+On a Wazuh agent server, run the below
 
 Pre-Requisites
 
@@ -24,9 +24,9 @@ pip install requests
 3.  Sets up cron to pull data from onboardbase every 3 minutes
 4. `bash ./setup.sh [ONBOARDBASE_API_KEY] [ONBOARDBASE_PROJECT_NAME]`
 
-The setup collect logs at `/var/onboardbase/logs/remote_activity.log`
+The setup collect logs at `/var/onboardbase/logs/remote_activity.log`.
 
-The logs for the last run can be viewed here: `/var/onboardbase/logs/cron.log`
+The logs for the last run can be viewed here: `/var/onboardbase/logs/cron.log`.
 
 Finally, setup your wazuh-agent or wazuh-server to collect logs from this file.
 
@@ -43,7 +43,7 @@ Finally, setup your wazuh-agent or wazuh-server to collect logs from this file.
 ```
 ---
 
-Confirm that the activity-log file is populated
+Confirm that the activity-log file is populated.
 
 ---
 ```bash
@@ -52,9 +52,7 @@ tail -f /var/onboardbase/logs/remote_activity.log
 ---
 
 ### Staying updated
-Please maintain this repo anywhere it is been setup.
-
-Bug and improvements would be pushed directly to the upstream
+Please maintain this repo anywhere it is been setup. Bug and improvements would be pushed directly to the upstream.
 
 You only need to come to the directory where this repo is and run:
 
