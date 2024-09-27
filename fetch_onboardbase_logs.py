@@ -84,7 +84,7 @@ def fetch_logs(after_time):
     params = {
         "project": getenv("ONBOARDBASE_PROJECT"),
         "skip": 0,
-        "take": 10,
+        "take": 1000,
         "after": after_time
     }
 
