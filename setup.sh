@@ -24,19 +24,19 @@ mkdir -p "/etc/onboardbase/logs"
 
 
  # Create a temporary file to hold the current crontab
- TEMP_CRONTAB=$(mktemp)
+TEMP_CRONTAB=$(mktemp)
 
- # Get the current crontab
- crontab -l > "$TEMP_CRONTAB"
+# Get the current crontab
+crontab -l > "$TEMP_CRONTAB"
 
- # Add the new cron job (every 3 minutes)
- # Adjust the command to activate your Python environment if necessary
- echo "*/3 * * * * ONBOARDBASE_PUBLIC_API_KEY=${1} ONBOARDBASE_PROJECT=${2} /usr/bin/python3 $SCRIPT_PATH >> /var/onboardbase/logs/cron.log 2>&1" >> "$TEMP_CRONTAB"
+# Add the new cron job (every 3 minutes)
+# Adjust the command to activate your Python environment if necessary
+echo "*/3 * * * * ONBOARDBASE_PUBLIC_API_KEY=${1} ONBOARDBASE_PROJECT=${2} /usr/bin/python3 $SCRIPT_PATH >> /var/onboardbase/logs/cron.log 2>&1" >> "$TEMP_CRONTAB"
 
- # Install the new crontab
- crontab "$TEMP_CRONTAB"
+# Install the new crontab
+crontab "$TEMP_CRONTAB"
 
- # Remove the temporary file
- rm "$TEMP_CRONTAB"
+# Remove the temporary file
+rm "$TEMP_CRONTAB"
 
- echo "Cron job added: Run $SCRIPT_PATH every 3 minutes."
+echo "Cron job added: Run $SCRIPT_PATH every 3 minutes."

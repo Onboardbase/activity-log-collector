@@ -19,16 +19,18 @@ pip install requests
 ```
 ---
 
-1. `git clone github.com/Onboardbase/onboardbase-wazuh`
+1. `git clone https://github.com/Onboardbase/wazuh.git onboardbase-wazuh`
 2. `cd onboardbase-wazuh`
-3.  Setup 
-4. `bash ./setup.sh [ONBOARDBASE_API_KEY]`  # Sets up cron to pull data from onboardbase every 3 minutes
+3.  Sets up cron to pull data from onboardbase every 3 minutes
+4. `bash ./setup.sh [ONBOARDBASE_API_KEY] [ONBOARDBASE_PROJECT_NAME]`
 
 The setup collect logs at `/var/onboardbase/logs/remote_activity.log`
 
 The logs for the last run can be viewed here: `/var/onboardbase/logs/cron.log`
 
-Finally, setup your waz uh-agent or wazuh-server to collect logs from this file
+Finally, setup your wazuh-agent or wazuh-server to collect logs from this file.
+
+[Wazuh Documentation - Monitoring Basic Logfiles](https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/monitoring-log-files.html#monitoring-basic-log-files)
 
 ---
 ```xml
@@ -48,3 +50,16 @@ Confirm that the activity-log file is populated
 tail -f /var/onboardbase/logs/remote_activity.log
 ```
 ---
+
+### Staying updated
+Please maintain this repo anywhere it is been setup.
+
+Bug and improvements would be pushed directly to the upstream
+
+You only need to come to the directory where this repo is and run:
+
+```bash
+git pull
+```
+
+Since the script runs via a cron job, the changes would be picked automatically on the next run.
