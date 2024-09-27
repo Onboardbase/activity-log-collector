@@ -5,7 +5,7 @@ import socket
 import os
 
 # API URL
-url = "https://public.onboardbase.com/api/v1/activity-logs"
+url = "https://devpublic.onboardbase.com/api/v1/activity-logs"
 
 # Path to the file where the last timestamp is saved
 timestamp_file = "/etc/onboardbase/logs/last_run_timestamp"
@@ -129,8 +129,7 @@ def fetch_logs(after_time):
 # Get the last run time or use a default start time
 last_run_time = get_last_run_time()
 if last_run_time is None:
-    # If no previous timestamp, use a default (e.g., 2023-11-12T13:26:32.684Z)
-    last_run_time = "2023-11-12T13:26:32.684Z"
+    last_run_time = "2022-11-12T13:26:32.684Z"
 
 # Fetch logs and update the last run timestamp
 fetch_logs(last_run_time)
