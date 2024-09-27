@@ -39,7 +39,8 @@ def format_log(log):
     user_info = log.get("user", {})
     team_info = log.get("team", {})
     project_info = log.get("project", {})
-    secret_env_info = log.get("secretEnvironment", {})
+    secret_env_info = log.get("secretEnvironment", {}) if log.get("secretEnvironment") else {}
+
 
     return {
         "IP Address": log.get("ip"),
