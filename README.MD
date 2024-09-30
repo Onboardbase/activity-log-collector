@@ -19,8 +19,8 @@ pip install requests
 ```
 ---
 
-1. `git clone https://github.com/Onboardbase/wazuh.git onboardbase-wazuh`
-2. `cd onboardbase-wazuh`
+1. `git clone https://github.com/Onboardbase/activity-log-collector.git onboardbase-activity-log-collector`
+2. `cd onboardbase-activity-log-collector`
 3.  Sets up cron to pull data from onboardbase every 3 minutes
 4. `bash ./setup.sh [ONBOARDBASE_API_KEY] [ONBOARDBASE_PROJECT_NAME]`
 
