@@ -1,5 +1,5 @@
 
-## Onboardbase Log Integration
+## Scrape Onboardbase activity logs
 
 This repo provides the necessary setup and code required to make onboardbase push logs to Wazuh Cluster.
 
