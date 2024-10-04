@@ -5,7 +5,7 @@ import socket
 import os
 
 # API URL
-url = "https://devpublic.onboardbase.com/api/v1/activity-logs"
+url = "https://public.onboardbase.com/api/v1/activity-logs"
 
 # Path to the file where the last timestamp is saved
 timestamp_file = "/etc/onboardbase/logs/last_run_timestamp"
